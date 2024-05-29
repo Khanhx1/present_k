@@ -1,0 +1,13 @@
+<app-home [hName] = "name" (changeFlag)="receiveValue($event)"></app-home>
+
+<br>
+<p>{{so}}</p>
+<p>{{log}}</p>
+<p>{{gender}}</p>
+
+<img [src]="url">
+<hr>
+<p>Quantity</p>
+<input type="number" (input)="handleChangeQuantity($event)"><br>
+<p>Total:</p>
+<p>{{total | number:'2.2-4'}}</p>
