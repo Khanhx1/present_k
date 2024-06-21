@@ -1,0 +1,34 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "P1",
+      "description": "loo"
+    },
+    {
+      "name": "P2",
+      "description": "khanh io",
+      "id": "2"
+    },
+    {
+      "id": "3",
+      "name": "P3",
+      "description": "loo"
+    },
+    {
+      "id": "4",
+      "name": "P4",
+      "description": "loo"
+    },
+    {
+      "id": "fec9",
+      "name": "P6",
+      "description": "kkkka"
+    },
+    {
+      "id": "f015",
+      "name": "P7",
+      "description": "123"
+    }
+  ]
+}

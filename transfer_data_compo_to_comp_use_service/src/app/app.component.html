@@ -1,0 +1,33 @@
+<a routerLink="/">home-link</a>
+
+<app-home [hName] = "name" [negative]="negative" (homeData)="receiveValue($event)"></app-home>
+
+
+<p>{{so}}</p>
+
+
+
+
+
+<!-- <button (click)="decrease()">decrease</button> -->
+
+<!-- <a routerLink="/">Home</a><br>
+<a routerLink="/product">Product</a><br>
+<a routerLink="/detail/4">detail</a><br> -->
+
+
+<!-- <p [style.color]="'red'">{{gender}}</p> -->
+
+<!-- <img [src]="url"> -->
+
+<!-- 
+<hr>
+<p>Quantity</p> 
+<input type="number" (input)="handleChangeQuantity(data.value)" #data><br>
+<p>Total:</p>
+<p>{{total | number:'2.2-4'}}</p>
+
+<input type="text" [(ngModel)]="username">
+<p>Your username is: {{ username }}</p> -->
+
+<router-outlet></router-outlet>

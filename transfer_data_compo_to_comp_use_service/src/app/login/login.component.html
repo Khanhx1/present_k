@@ -1,0 +1,13 @@
+<form class="col-8 m-auto border border-2 border-info shadow-lg rounded p-3" #frm1="ngForm">
+    <p> Username
+        <input name="username" ngModel class="form-control border-info shadow-none" type="text">
+    </p>
+    <p>Password
+        <input name="password" ngModel class="form-control border-info shadow-none" type="password">
+    </p>
+    <p><button type="submit" class="btn btn-info">Đăng nhập </button> </p>
+</form>
+
+<p> Value : {{frm1.value|json}} </p>	
+<p> Username : {{frm1.value.username}} </p>
+<p> Password : {{frm1.value.password}} </p>

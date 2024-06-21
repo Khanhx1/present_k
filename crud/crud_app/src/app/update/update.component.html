@@ -1,0 +1,25 @@
+<div *ngIf="product.name != ''">
+    <div>
+        <div class="d-flex justify-content-center mt-5">
+            <h3>Add new product</h3>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class="col-4">
+                <form [formGroup]="kform" (ngSubmit)="onSubmit()">
+                    <p>Name</p>
+                    <input type="text" formControlName="name">
+                
+    
+                    <p>Description</p>
+                    <input type="text" formControlName="description">
+               
+                    
+                    <button type="submit" class="kk">Add</button>
+                </form>
+                <a routerLink="/">Back</a>
+            </div>
+        </div>
+    </div>
+    
+    
+</div>
