@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
 import { FormGroup, FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
 import { IProduct, ProductServiceService } from '../product-service.service';
 
 @Component({
@@ -76,5 +76,13 @@ idUrl:number = -1;
    
   
     
+  }
+
+  get name(){
+    return this.kform.get('name');
+  }
+
+  get description(){
+    return this.kform.get('description');
   }
 }

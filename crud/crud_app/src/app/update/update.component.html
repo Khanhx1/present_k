@@ -1,20 +1,34 @@
 <div *ngIf="product.name != ''">
     <div>
         <div class="d-flex justify-content-center mt-5">
-            <h3>Add new product</h3>
+            <h3>Update product</h3>
         </div>
         <div class="d-flex justify-content-center">
             <div class="col-4">
                 <form [formGroup]="kform" (ngSubmit)="onSubmit()">
                     <p>Name</p>
-                    <input type="text" formControlName="name">
-                
+                    <input type="text" formControlName="name" required>
+                    <div *ngIf="name?.invalid && (name?.dirty || name?.touched || formSubmitted)" class="alert alert-danger">
+                        <div *ngIf="name?.hasError('required')">
+                            Name is required :v
+                        </div>
+                        <div *ngIf="name?.hasError('pattern')">
+                        Format: PXXXX (X = number)
+                        </div>
+                    </div>
     
                     <p>Description</p>
                     <input type="text" formControlName="description">
-               
+                    <div *ngIf="description?.invalid && (description?.dirty || description?.touched || formSubmitted)" class="alert alert-danger">
+                        <div *ngIf="description?.hasError('required')">
+                            Description is required :v
+                        </div>
+                        <div *ngIf="description?.hasError('maxlength')">
+                            Characters must be less than 100
+                        </div>
+                    </div>
                     
-                    <button type="submit" class="kk">Add</button>
+                    <button type="submit" class="kk">Update</button>
                 </form>
                 <a routerLink="/">Back</a>
             </div>

@@ -34,4 +34,8 @@ export class ProductServiceService {
   updateProduct(p: IProduct, id: number) {
     return this.h.put(`http://localhost:8081/products/${id}`, p);
   }
+
+  deleteProduct(id: number) {
+    return this.h.delete(`http://localhost:8081/products/${id}`);
+  }
 }
